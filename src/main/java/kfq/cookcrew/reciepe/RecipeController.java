@@ -365,7 +365,7 @@ public class RecipeController extends BaseController {
             try {
                 PageInfo pageInfo = new PageInfo();
                 pageInfo.setCurPage(page);
-                List<Recipe> searchResultList = recipeService.searchByKeyword(keyword);
+                List<Recipe> searchResultList = recipeService.searchResultPage(pageInfo, keyword);
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("pageInfo",pageInfo);
                 map.put("recipes",searchResultList);
